@@ -37,8 +37,18 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
+            'driver'   => 'session',
             'provider' => 'users',
+        ],
+
+        'user' => [
+            'driver'   => 'session',
+            'provider' => 'users',
+        ],
+
+        'karyawan' => [
+            'driver'   => 'session',
+            'provider' => 'karyawans',
         ],
     ],
 
@@ -62,8 +72,14 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model'  => App\Models\User::class,
         ],
+
+        'karyawans'  => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\Karyawan::class,
+        ],
+
 
         // 'users' => [
         //     'driver' => 'database',

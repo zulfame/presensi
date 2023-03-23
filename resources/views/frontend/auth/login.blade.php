@@ -34,15 +34,18 @@
             <div class="section">
                 <img src="{{ asset('assets/img/vector/img_login.webp') }}" alt="image" class="form-image">
             </div>
+
             <div class="section mt-1">
                 <h1>E-Presensi</h1>
                 <h4>Fill the form to log in</h4>
             </div>
+
             <div class="section mt-1 mb-5">
-                <form action="app-pages.html">
+                <form action="/login" method="POST">
+                    @csrf
                     <div class="form-group boxed">
                         <div class="input-wrapper">
-                            <input type="email" class="form-control" id="email1" placeholder="Email address">
+                            <input type="text" class="form-control" id="nik" placeholder="NIK" name="nik">
                             <i class="clear-input">
                                 <ion-icon name="close-circle"></ion-icon>
                             </i>
@@ -51,7 +54,7 @@
 
                     <div class="form-group boxed">
                         <div class="input-wrapper">
-                            <input type="password" class="form-control" id="password1" placeholder="Password">
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                             <i class="clear-input">
                                 <ion-icon name="close-circle"></ion-icon>
                             </i>
@@ -68,6 +71,7 @@
 
                 </form>
             </div>
+
         </div>
 
     </div>
